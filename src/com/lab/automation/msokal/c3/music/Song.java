@@ -9,14 +9,13 @@ public final class Song extends Sound  {
 
     public Song(String songName, int bitrate,
                 double size, double time, int Rating,
-                int year, int countOfListen, String Genre) {
+                int countOfListen, String Genre) {
         super(bitrate, size, time);
         this.Rating = Rating;
         this.countOfListen = countOfListen;
         this.songName = songName;
         this.Genre=Genre;
     }
-
 
     public String getSongName() {
         return songName;

@@ -13,6 +13,7 @@ public class Sound  {
 
     }
 
+
     public int getBitrate() {
         return bitrate;
     }

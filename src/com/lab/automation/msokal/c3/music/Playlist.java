@@ -1,10 +1,12 @@
 package com.lab.automation.msokal.c3.music;
 
-public class Playlist extends AbstractPL{
+import java.util.Objects;
+
+public class Playlist extends AbstractPL {
     private String playlistname;
 
-    public Playlist(int bitrate, double size, double time, int trackCount, int timepl, String songName) {
-        super(bitrate, size, time, trackCount, timepl, songName);
+    public Playlist(int trackCount, int timepl, String songName) {
+        super(trackCount, timepl, songName);
     }
 
     public String getPlaylistname() {
@@ -13,6 +15,13 @@ public class Playlist extends AbstractPL{
 
     public void setPlaylistname(String playlistname) {
         this.playlistname = playlistname;
+    }
+
+    @Override
+    public String toString() {
+        return "Playlist{" +
+                "playlistname='" + playlistname + '\'' +
+                '}';
     }
 }
 

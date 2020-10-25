@@ -1,12 +1,18 @@
 package com.lab.automation.msokal.c3.add.pricep;
+import java.util.Date;
 
-public abstract class PricePlan {
+public class PricePlan {
     private int costPerMonth;
     private String Status;
-    public PricePlan (int costPerMonth, String Status){
-        this.costPerMonth=costPerMonth;
-        this.Status=Status;
 
+    Date date = new Date();
+
+
+
+    public PricePlan(int costPerMonth, String status, Date date) {
+        this.costPerMonth = costPerMonth;
+        Status = status;
+        this.date = date;
     }
 
     public int getCostPerMonth() {
@@ -23,5 +29,14 @@ public abstract class PricePlan {
 
     public void setStatus(String status) {
         Status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "PricePlan{" +
+                "costPerMonth=" + costPerMonth +
+                ", Status='" + Status + '\'' +
+                ", date=" + date +
+                '}';
     }
 }

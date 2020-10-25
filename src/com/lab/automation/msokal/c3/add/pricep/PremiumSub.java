@@ -1,11 +1,15 @@
 package com.lab.automation.msokal.c3.add.pricep;
 
+import java.time.Period;
+import java.util.Date;
+
 public class PremiumSub extends PricePlan {
-    public PremiumSub(int costPerMonth, String Status) {
-        super(costPerMonth, Status);
-        costPerMonth = 25;
-        Status = "Premium";
+    int costPerMonth=25;
+    String status="Premiun";
+    public PremiumSub(int costPerMonth, String status, Date date) {
+        super(costPerMonth, status, date);
     }
+
 
 
 }

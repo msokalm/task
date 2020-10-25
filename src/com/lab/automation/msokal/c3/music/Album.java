@@ -1,35 +1,39 @@
 package com.lab.automation.msokal.c3.music;
 
-public class Album extends Artist {
-    String albumName;
+public class Album {
+    private String albumName;
+    private int year;
 
 
-    public Album(String name, int rating,String albumName) {
-        super(name,  rating);
-        this.albumName=albumName;
+    public Album(String albumName, int year) {
+        this.albumName = albumName;
+        this.year = year;
     }
 
+    public String getAlbumName() {
+        return albumName;
+    }
+
+    public void setAlbumName(String albumName) {
+        this.albumName = albumName;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
 
     @Override
-    public int getRating() {
-        return super.getRating();
+    public String toString() {
+        return "Album{" +
+                "albumName='" + albumName + '\'' +
+                '}';
     }
-
-    @Override
-    public void setRating(int rating) {
-        super.setRating(rating);
-    }
-
-    @Override
-    public String getArtistName() {
-        return super.getArtistName();
-    }
-
-    @Override
-    public void setArtistName(String artistName) {
-        super.setArtistName(artistName);
-    }
-
-
 }
+
+
+
 
