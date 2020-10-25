@@ -13,16 +13,13 @@ public  class Userr  {
     protected PricePlan pricePlan;
 
 
-    public Userr(String login,PricePlan pricePlan, String userID, String password) {
+    public Userr(String login, String userID, String password, PricePlan pricePlan) {
         this.login = login;
         this.userID = userID;
         this.password = password;
-        this.hPay = true;
+        this.hPay = hPay;
         this.pricePlan = pricePlan;
     }
-
-
-
 
     public String getLogin() {
         return login;
@@ -56,6 +53,15 @@ public  class Userr  {
         this.hPay = hPay;
     }
 
-
+    @Override
+    public String toString() {
+        return "Userr{" +
+                "login='" + login + '\'' +
+                ", userID='" + userID + '\'' +
+                ", password='" + password + '\'' +
+                ", hPay=" + hPay +
+                ", pricePlan=" + pricePlan +
+                '}';
+    }
 }
 
