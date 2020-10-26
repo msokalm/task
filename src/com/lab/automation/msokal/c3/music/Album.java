@@ -1,5 +1,8 @@
 package com.lab.automation.msokal.c3.music;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 public class Album extends AbstractPL{
     private String albumName;
     private int year;
@@ -12,11 +15,11 @@ public class Album extends AbstractPL{
             new Song("songName7", 256, 5.1, 3.5, 1230, 11111, "pop"),
             new Song("songName8", 256, 5.0, 3.0, 300, 5000,"pop")};*/
     Playlist[] album ={new Playlist(12,42,"tttt"),
-            new Playlist(12,42,"tttt"),
-            new Playlist(12,42,"tttt")};
+            new Playlist(15,48,"tttt"),
+            new Playlist(13,44,"tttt")};
 
 
-    public Album(int trackCount, int timepl, String songName, String albumName, int year, Playlist[] album) {
+    public Album(int trackCount, int timepl, String songName, String albumName, int year) {
         super(trackCount, timepl, songName);
         this.albumName = albumName;
         this.year = year;
@@ -47,6 +50,23 @@ public class Album extends AbstractPL{
         return "Album{" +
                 "albumName='" + albumName + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Album album1 = (Album) o;
+        return year == album1.year &&
+                Objects.equals(albumName, album1.albumName) &&
+                Arrays.equals(album, album1.album);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(albumName, year);
+        result = 31 * result + Arrays.hashCode(album);
+        return result;
     }
 }
 

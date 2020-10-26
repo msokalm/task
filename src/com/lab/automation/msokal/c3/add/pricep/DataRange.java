@@ -2,6 +2,7 @@ package com.lab.automation.msokal.c3.add.pricep;
 
 
 import java.time.OffsetDateTime;
+import java.util.Objects;
 
 public class DataRange {
     private OffsetDateTime dateStart;
@@ -30,4 +31,25 @@ public class DataRange {
         this.dateEnd = dateEnd;
     }
 
+    @Override
+    public String toString() {
+        return "DataRange{" +
+                "dateStart=" + dateStart +
+                ", dateEnd=" + dateEnd +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        DataRange dataRange = (DataRange) o;
+        return Objects.equals(dateStart, dataRange.dateStart) &&
+                Objects.equals(dateEnd, dataRange.dateEnd);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(dateStart, dateEnd);
+    }
 }

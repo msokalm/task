@@ -1,6 +1,7 @@
 package com.lab.automation.msokal.c3.music;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public abstract class AbstractPL {
     int trackCount;
@@ -64,6 +65,24 @@ public abstract class AbstractPL {
                 ", songName='" + songName + '\'' +
                 ", playlist1=" + Arrays.toString(playlist1) +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        AbstractPL that = (AbstractPL) o;
+        return trackCount == that.trackCount &&
+                timepl == that.timepl &&
+                Objects.equals(songName, that.songName) &&
+                Arrays.equals(playlist1, that.playlist1);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(trackCount, timepl, songName);
+        result = 31 * result + Arrays.hashCode(playlist1);
+        return result;
     }
 }
 

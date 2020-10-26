@@ -23,5 +23,19 @@ public class Playlist extends AbstractPL {
                 "playlistname='" + playlistname + '\'' +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Playlist playlist = (Playlist) o;
+        return Objects.equals(playlistname, playlist.playlistname);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), playlistname);
+    }
 }
 

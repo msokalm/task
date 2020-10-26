@@ -55,17 +55,6 @@ public  class Userr  {
     }
 
     @Override
-    public String toString() {
-        return "Userr{" +
-                "login='" + login + '\'' +
-                ", userID='" + userID + '\'' +
-                ", password='" + password + '\'' +
-                ", hPay=" + hPay +
-                ", pricePlan=" + pricePlan +
-                '}';
-    }
-
-    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -75,6 +64,17 @@ public  class Userr  {
                 Objects.equals(userID, userr.userID) &&
                 Objects.equals(password, userr.password) &&
                 Objects.equals(pricePlan, userr.pricePlan);
+    }
+
+    @Override
+    public String toString() {
+        return "Userr{" +
+                "login='" + login + '\'' +
+                ", userID='" + userID + '\'' +
+                ", password='" + password + '\'' +
+                ", hPay=" + hPay +
+                ", pricePlan=" + pricePlan +
+                '}';
     }
 
 

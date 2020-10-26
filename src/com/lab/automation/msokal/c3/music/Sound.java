@@ -1,5 +1,7 @@
 package com.lab.automation.msokal.c3.music;
 
+import java.util.Objects;
+
 public class Sound  {
     private int bitrate;
     private double size;
@@ -45,5 +47,20 @@ public class Sound  {
                 ", size=" + size +
                 ", time=" + time +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Sound sound = (Sound) o;
+        return bitrate == sound.bitrate &&
+                Double.compare(sound.size, size) == 0 &&
+                Double.compare(sound.time, time) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(bitrate, size, time);
     }
 }

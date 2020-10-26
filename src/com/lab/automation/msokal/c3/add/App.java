@@ -37,15 +37,6 @@ public abstract class App {
     }
 
     @Override
-    public String toString() {
-        return "App{" +
-                "typeOS='" + typeOS + '\'' +
-                ", usTime=" + usTime +
-                ", pricePlan=" + pricePlan +
-                '}';
-    }
-
-    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -55,5 +46,12 @@ public abstract class App {
                 Objects.equals(pricePlan, app.pricePlan);
     }
 
-
+    @Override
+    public String toString() {
+        return "App{" +
+                "typeOS='" + typeOS + '\'' +
+                ", usTime=" + usTime +
+                ", pricePlan=" + pricePlan +
+                '}';
+    }
 }

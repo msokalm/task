@@ -1,5 +1,7 @@
 package com.lab.automation.msokal.c3.music;
 
+import java.util.Objects;
+
 public final class Song extends Sound  {
     private String songName;
     private int Rating;
@@ -56,5 +58,21 @@ public final class Song extends Sound  {
                 ", Rating=" + Rating +
                 ", countOfListen=" + countOfListen +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Song song = (Song) o;
+        return Rating == song.Rating &&
+                countOfListen == song.countOfListen &&
+                Objects.equals(songName, song.songName) &&
+                Objects.equals(Genre, song.Genre);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(songName, Rating, countOfListen, Genre);
     }
 }
