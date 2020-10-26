@@ -1,36 +1,17 @@
 package com.lab.automation.msokal.c3.add.pricep;
 
-import java.time.Period;
-import java.util.Date;
-
 public class BasicSub extends PricePlan {
-    int costPerMonth=0;
-    String status="Free";
+    private String status;
+    private int costPerMonth;
 
 
-
-    public BasicSub(int costPerMonth, String status, Date date) {
-        super(costPerMonth, status, date);
-
+    public BasicSub(int costPerMonth, String status, DataRange dateRange) {
+        super(costPerMonth, status, dateRange);
+        this.status="basic";
+        this.costPerMonth=10;
     }
 
-    @Override
-    public int getCostPerMonth() {
-        return costPerMonth;
-    }
-
-    @Override
-    public void setCostPerMonth(int costPerMonth) {
-        this.costPerMonth = costPerMonth;
-    }
-
-    @Override
-    public String getStatus() {
-        return status;
-    }
-
-    @Override
-    public void setStatus(String status) {
-        this.status = status;
-    }
 }
+
+
+

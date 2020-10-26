@@ -2,6 +2,8 @@ package com.lab.automation.msokal.c3.add;
 
 import com.lab.automation.msokal.c3.inteffaces.iPay;
 
+import java.util.Objects;
+
 public class Card implements iPay {
     long creditCardNumber;
     int exparationDate;
@@ -45,4 +47,18 @@ public class Card implements iPay {
 
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Card card = (Card) o;
+        return creditCardNumber == card.creditCardNumber &&
+                exparationDate == card.exparationDate &&
+                securityCodde == card.securityCodde;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(creditCardNumber, exparationDate, securityCodde);
+    }
 }

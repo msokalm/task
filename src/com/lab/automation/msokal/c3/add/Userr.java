@@ -2,6 +2,7 @@ package com.lab.automation.msokal.c3.add;
 
 import com.lab.automation.msokal.c3.add.pricep.PricePlan;
 
+import java.util.Objects;
 
 
 public  class Userr  {
@@ -63,5 +64,19 @@ public  class Userr  {
                 ", pricePlan=" + pricePlan +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Userr userr = (Userr) o;
+        return hPay == userr.hPay &&
+                Objects.equals(login, userr.login) &&
+                Objects.equals(userID, userr.userID) &&
+                Objects.equals(password, userr.password) &&
+                Objects.equals(pricePlan, userr.pricePlan);
+    }
+
+
 }
 

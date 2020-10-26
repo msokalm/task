@@ -1,21 +1,22 @@
 package com.lab.automation.msokal.c3.add;
 
+import com.lab.automation.msokal.c3.add.pricep.DataRange;
 import com.lab.automation.msokal.c3.add.pricep.PricePlan;
 
 import java.util.Date;
+import java.util.Objects;
 
 public abstract class App {
 
     private String typeOS;
     private double usTime;
-    private PricePlan pricePlan = new PricePlan(0,"free", new Date());
-    private Userr userr = new Userr("namelastname", "1223312",
-            "*******",new  PricePlan(0,"free",new Date(0,3,0)));
+    private PricePlan pricePlan;
 
 
-    public App(String typeOS, double usTime) {
+    public App(String typeOS, double usTime,PricePlan pricePlan) {
         this.typeOS = typeOS;
         this.usTime = usTime;
+        this.pricePlan=pricePlan;
 
     }
 
@@ -35,19 +36,24 @@ public abstract class App {
         this.usTime = usTime;
     }
 
-    public PricePlan getPricePlan() {
-        return pricePlan;
+    @Override
+    public String toString() {
+        return "App{" +
+                "typeOS='" + typeOS + '\'' +
+                ", usTime=" + usTime +
+                ", pricePlan=" + pricePlan +
+                '}';
     }
 
-    public void setPricePlan(PricePlan pricePlan) {
-        this.pricePlan = pricePlan;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        App app = (App) o;
+        return Double.compare(app.usTime, usTime) == 0 &&
+                Objects.equals(typeOS, app.typeOS) &&
+                Objects.equals(pricePlan, app.pricePlan);
     }
 
-    public Userr getUserr() {
-        return userr;
-    }
 
-    public void setUserr(Userr userr) {
-        this.userr = userr;
-    }
 }
