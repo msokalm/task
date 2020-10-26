@@ -3,13 +3,15 @@ package com.lab.automation.msokal.c3.music;
 public class Artist {
     private String ArtistName;
     private int rating;
-    Album album = new Album("test1",2000);
+    private Album[] Album = {new Album("test1", 2000),
+            new Album("test2", 2002),
+            new Album("test", 2010)};
 
 
     public Artist(String artistName, int rating, Album album) {
         ArtistName = artistName;
         this.rating = rating;
-        this.album = album;
+
     }
 
     public String getArtistName() {
@@ -28,20 +30,13 @@ public class Artist {
         this.rating = rating;
     }
 
-    public Album getAlbum() {
-        return album;
-    }
 
-    public void setAlbum(Album album) {
-        this.album = album;
-    }
 
     @Override
     public String toString() {
         return "Artist{" +
                 "ArtistName='" + ArtistName + '\'' +
                 ", rating=" + rating +
-                ", album=" + album +
                 '}';
     }
 }
