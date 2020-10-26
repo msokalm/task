@@ -3,14 +3,13 @@ package com.lab.automation.msokal.c3.music;
 public class Artist {
     private String ArtistName;
     private int rating;
-    private Album[] Album = {new Album("test1", 2000),
-            new Album("test2", 2002),
-            new Album("test", 2010)};
+    private Album album;
 
-
-    public Artist(String artistName, int rating, Album album) {
+    public Artist(String artistName, int rating, Album Album) {
         ArtistName = artistName;
         this.rating = rating;
+        this.album = album;
+
 
     }
 
