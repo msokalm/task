@@ -1,6 +1,5 @@
-package com.lab.automation.msokal.c3.add.pricep;
+package com.lab.automation.msokal.c3.music;
 
-import java.util.Date;
 import java.util.Objects;
 
 public class FreeSub extends PricePlan {

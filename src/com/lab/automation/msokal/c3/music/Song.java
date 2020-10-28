@@ -1,22 +1,22 @@
 package com.lab.automation.msokal.c3.music;
 
 import java.util.Objects;
+import com.lab.automation.msokal.c3.enums.Genre;
 
-public final class Song extends Sound  {
+public final class Song extends Sound {
     private String songName;
     private int Rating;
     private int countOfListen;
-    private String Genre;
+    private Genre genre;
 
-
-    public Song(String songName, int bitrate,
-                double size, double time, int Rating,
-                int countOfListen, String Genre) {
+    public Song(int bitrate, double size, double time,
+                String songName, int rating, int countOfListen,
+                Genre genre) {
         super(bitrate, size, time);
-        this.Rating = Rating;
-        this.countOfListen = countOfListen;
         this.songName = songName;
-        this.Genre=Genre;
+        this.Rating = rating;
+        this.countOfListen = countOfListen;
+        this.genre=genre;
     }
 
     public String getSongName() {
@@ -43,12 +43,12 @@ public final class Song extends Sound  {
         this.countOfListen = countOfListen;
     }
 
-    public String getGenre() {
-        return Genre;
+    public Genre getGenre() {
+        return genre;
     }
 
-    public void setGenre(String genre) {
-        Genre = genre;
+    public void setGenre(Genre genre) {
+        this.genre = genre;
     }
 
     @Override
@@ -57,6 +57,7 @@ public final class Song extends Sound  {
                 "songName='" + songName + '\'' +
                 ", Rating=" + Rating +
                 ", countOfListen=" + countOfListen +
+                ", genre=" + genre +
                 '}';
     }
 
@@ -64,15 +65,16 @@ public final class Song extends Sound  {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
         Song song = (Song) o;
         return Rating == song.Rating &&
                 countOfListen == song.countOfListen &&
                 Objects.equals(songName, song.songName) &&
-                Objects.equals(Genre, song.Genre);
+                genre == song.genre;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(songName, Rating, countOfListen, Genre);
+        return Objects.hash(super.hashCode(), songName, Rating, countOfListen, genre);
     }
 }

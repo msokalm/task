@@ -1,12 +1,8 @@
-package com.lab.automation.msokal.c3.add;
+package com.lab.automation.msokal.c3.music;
 
-import com.lab.automation.msokal.c3.add.pricep.DataRange;
-import com.lab.automation.msokal.c3.add.pricep.PricePlan;
-
-import java.util.Date;
 import java.util.Objects;
 
-public abstract class App {
+public  class App {
 
     private String typeOS;
     private double usTime;

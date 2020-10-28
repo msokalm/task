@@ -1,5 +1,7 @@
 package com.lab.automation.msokal.c3.music;
 
+import com.lab.automation.msokal.c3.enums.Genre;
+
 import java.util.Arrays;
 import java.util.Objects;
 
@@ -7,14 +9,14 @@ public abstract class AbstractPL {
     int trackCount;
     int timepl;
     String songName;
-    Song[] playlist1 = {new Song("songName1", 256, 5.5, 3.2, 1234, 2121, "pop"),
-            new Song("songName2", 256, 5.4, 3.0, 321, 4000, "pop"),
-            new Song("songName3", 256, 5.4, 2.5, 2345, 11111, "pop"),
-            new Song("songName4", 256, 5.2, 3.4, 5555, 11111, "pop"),
-            new Song("songName5", 256, 5.3, 3.1, 12, 7500, "pop"),
-            new Song("songName6", 256, 5.1, 3.3, 5, 9300, "pop"),
-            new Song("songName7", 256, 5.1, 3.5, 1230, 11111, "pop"),
-            new Song("songName8", 256, 5.0, 3.0, 300, 5000, "pop")};
+    Song[] playlist1 = {new Song(128,5.3,3.0,"name1",4000,50000, Genre.POP),
+            new Song(128,5.3,3.0,"name1",4000,50000, Genre.ROCK),
+            new Song(128,5.3,3.0,"name1",4000,50000, Genre.POP),
+            new Song(128,5.3,3.0,"name1",4000,50000, Genre.OTHER),
+            new Song(128,5.3,3.0,"name1",4000,50000, Genre.POP),
+            new Song(128,5.3,3.0,"name1",4000,50000, Genre.ROCK),
+            new Song(128,5.3,3.0,"name1",4000,50000, Genre.POP)};
+
 
 
     public AbstractPL(int trackCount, int timepl, String songName) {

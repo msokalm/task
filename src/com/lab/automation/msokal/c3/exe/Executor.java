@@ -1,4 +1,4 @@
-package com.lab.automation.msokal.c3;
+package com.lab.automation.msokal.c3.exe;
 
 import java.util.Date;
 

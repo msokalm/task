@@ -1,17 +1,14 @@
-package com.lab.automation.msokal.c3.add;
-
-import com.lab.automation.msokal.c3.add.pricep.PricePlan;
+package com.lab.automation.msokal.c3.music;
 
 import java.util.Objects;
 
+public class Userr {
 
-public  class Userr  {
-
+    protected PricePlan pricePlan;
     private String login;
     private String userID;
     private String password;
     private boolean hPay;
-    protected PricePlan pricePlan;
 
 
     public Userr(String login, String userID, String password, PricePlan pricePlan) {
@@ -55,28 +52,35 @@ public  class Userr  {
     }
 
     @Override
+    public String toString() {
+        return "Userr{" +
+                "pricePlan=" + pricePlan +
+                ", login='" + login + '\'' +
+                ", userID='" + userID + '\'' +
+                ", password='" + password + '\'' +
+                ", hPay=" + hPay +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Userr userr = (Userr) o;
         return hPay == userr.hPay &&
+                Objects.equals(pricePlan, userr.pricePlan) &&
                 Objects.equals(login, userr.login) &&
                 Objects.equals(userID, userr.userID) &&
-                Objects.equals(password, userr.password) &&
-                Objects.equals(pricePlan, userr.pricePlan);
+                Objects.equals(password, userr.password);
     }
 
     @Override
-    public String toString() {
-        return "Userr{" +
-                "login='" + login + '\'' +
-                ", userID='" + userID + '\'' +
-                ", password='" + password + '\'' +
-                ", hPay=" + hPay +
-                ", pricePlan=" + pricePlan +
-                '}';
+    public int hashCode() {
+        return Objects.hash(pricePlan, login, userID, password, hPay);
     }
-
-
 }
+
+
+
+
 

@@ -1,4 +1,4 @@
-package com.lab.automation.msokal.c3.add.pricep;
+package com.lab.automation.msokal.c3.music;
 
 import java.util.Objects;
 

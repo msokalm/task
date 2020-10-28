@@ -1,4 +1,4 @@
-package com.lab.automation.msokal.c3.add;
+package com.lab.automation.msokal.c3.music;
 
 import com.lab.automation.msokal.c3.inteffaces.iPay;
 
