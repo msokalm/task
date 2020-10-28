@@ -6,14 +6,14 @@ public  class App {
 
     private String typeOS;
     private double usTime;
-    private PricePlan pricePlan;
+    private Userr userr;
+    private Subscription subscription;
 
-
-    public App(String typeOS, double usTime,PricePlan pricePlan) {
+    public App(String typeOS, double usTime, Userr userr, Subscription subscription) {
         this.typeOS = typeOS;
         this.usTime = usTime;
-        this.pricePlan=pricePlan;
-
+        this.userr = userr;
+        this.subscription = subscription;
     }
 
     public String getTypeOS() {
@@ -32,14 +32,20 @@ public  class App {
         this.usTime = usTime;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        App app = (App) o;
-        return Double.compare(app.usTime, usTime) == 0 &&
-                Objects.equals(typeOS, app.typeOS) &&
-                Objects.equals(pricePlan, app.pricePlan);
+    public Userr getUserr() {
+        return userr;
+    }
+
+    public void setUserr(Userr userr) {
+        this.userr = userr;
+    }
+
+    public Subscription getSubscription() {
+        return subscription;
+    }
+
+    public void setSubscription(Subscription subscription) {
+        this.subscription = subscription;
     }
 
     @Override
@@ -47,7 +53,24 @@ public  class App {
         return "App{" +
                 "typeOS='" + typeOS + '\'' +
                 ", usTime=" + usTime +
-                ", pricePlan=" + pricePlan +
+                ", userr=" + userr +
+                ", subscription=" + subscription +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        App app = (App) o;
+        return Double.compare(app.usTime, usTime) == 0 &&
+                Objects.equals(typeOS, app.typeOS) &&
+                Objects.equals(userr, app.userr) &&
+                Objects.equals(subscription, app.subscription);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(typeOS, usTime, userr, subscription);
     }
 }

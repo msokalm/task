@@ -4,20 +4,23 @@ import java.util.Objects;
 
 public class Userr {
 
-    protected PricePlan pricePlan;
+
+    private Subscription subscription;
     private String login;
     private String userID;
     private String password;
     private boolean hPay;
 
 
-    public Userr(String login, String userID, String password, PricePlan pricePlan) {
+    public Userr(Subscription subscription, String login, String userID, String password) {
+        this.subscription = subscription;
         this.login = login;
         this.userID = userID;
         this.password = password;
-        this.hPay = hPay;
-        this.pricePlan = pricePlan;
+        this.hPay=true;
     }
+
+
 
     public String getLogin() {
         return login;
@@ -54,7 +57,7 @@ public class Userr {
     @Override
     public String toString() {
         return "Userr{" +
-                "pricePlan=" + pricePlan +
+                "subscription=" + subscription +
                 ", login='" + login + '\'' +
                 ", userID='" + userID + '\'' +
                 ", password='" + password + '\'' +
@@ -68,7 +71,7 @@ public class Userr {
         if (o == null || getClass() != o.getClass()) return false;
         Userr userr = (Userr) o;
         return hPay == userr.hPay &&
-                Objects.equals(pricePlan, userr.pricePlan) &&
+                Objects.equals(subscription, userr.subscription) &&
                 Objects.equals(login, userr.login) &&
                 Objects.equals(userID, userr.userID) &&
                 Objects.equals(password, userr.password);
@@ -76,7 +79,7 @@ public class Userr {
 
     @Override
     public int hashCode() {
-        return Objects.hash(pricePlan, login, userID, password, hPay);
+        return Objects.hash(subscription, login, userID, password, hPay);
     }
 }
 

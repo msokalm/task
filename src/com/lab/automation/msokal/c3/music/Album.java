@@ -6,7 +6,6 @@ import java.util.Objects;
 
 public class Album extends AbstractPL{
     private Playlistname playlistname;
-   // private String albumName;
     private int year;
     private Playlist album;
 
