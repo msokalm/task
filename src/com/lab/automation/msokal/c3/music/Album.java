@@ -68,6 +68,21 @@ public class Album extends AbstractPL{
     public int hashCode() {
         return Objects.hash(super.hashCode(), albumName, year, album);
     }
+
+    @Override
+    public void Play() {
+
+    }
+
+    @Override
+    public void Pause() {
+
+    }
+
+    @Override
+    public void Repeat() {
+
+    }
 }
 
 

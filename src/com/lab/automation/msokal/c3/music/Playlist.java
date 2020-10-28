@@ -1,19 +1,21 @@
 package com.lab.automation.msokal.c3.music;
 
+import com.lab.automation.msokal.c3.enums.Playlistname;
+
 import java.util.Objects;
 
 public class Playlist extends AbstractPL {
-    private String playlistname;
+    private Playlistname playlistname;
 
     public Playlist(int trackCount, int timepl, String songName) {
         super(trackCount, timepl, songName);
     }
 
-    public String getPlaylistname() {
+    public Playlistname getPlaylistname() {
         return playlistname;
     }
 
-    public void setPlaylistname(String playlistname) {
+    public void setPlaylistname(Playlistname playlistname) {
         this.playlistname = playlistname;
     }
 
@@ -36,6 +38,21 @@ public class Playlist extends AbstractPL {
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), playlistname);
+    }
+
+    @Override
+    public void Play() {
+
+    }
+
+    @Override
+    public void Pause() {
+
+    }
+
+    @Override
+    public void Repeat() {
+
     }
 }
 
