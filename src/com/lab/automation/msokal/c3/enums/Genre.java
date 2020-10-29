@@ -12,5 +12,8 @@ public enum Genre {
     }
 
 
+    public String getGen() {
+        return gen;
+    }
 }
 

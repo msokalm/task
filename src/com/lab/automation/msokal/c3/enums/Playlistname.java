@@ -11,4 +11,7 @@ public enum Playlistname {
         plst = plst;
     }
 
+    public String getPlst() {
+        return plst;
+    }
 }
