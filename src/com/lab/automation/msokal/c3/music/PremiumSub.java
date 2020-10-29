@@ -6,7 +6,7 @@ public class PremiumSub extends PricePlan {
     private int costPerMonth;
     private String status;
 
-    public PremiumSub(int costPerMonth, String status, DataRange dateRange) {
+    public PremiumSub(int costPerMonth, String status, DateRange dateRange) {
         super(costPerMonth, status, dateRange);
         this.costPerMonth = 25;
         this.status = "prermium";

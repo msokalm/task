@@ -47,18 +47,5 @@ public final class Chart extends AbstractPL  {
         return Objects.hash(super.hashCode(), theme);
     }
 
-    @Override
-    public void Play() {
 
-    }
-
-    @Override
-    public void Pause() {
-
-    }
-
-    @Override
-    public void Repeat() {
-
-    }
 }

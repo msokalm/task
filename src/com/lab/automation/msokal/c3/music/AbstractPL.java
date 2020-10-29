@@ -1,12 +1,11 @@
 package com.lab.automation.msokal.c3.music;
 
 import com.lab.automation.msokal.c3.enums.Genre;
-import com.lab.automation.msokal.c3.inteffaces.iControl;
 
 import java.util.Arrays;
 import java.util.Objects;
 
-public abstract class AbstractPL implements iControl {
+public abstract class AbstractPL {
     int trackCount;
     int timepl;
     String songName;

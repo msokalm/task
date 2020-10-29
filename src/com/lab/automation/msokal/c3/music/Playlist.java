@@ -40,19 +40,5 @@ public class Playlist extends AbstractPL {
         return Objects.hash(super.hashCode(), playlistname);
     }
 
-    @Override
-    public void Play() {
-
-    }
-
-    @Override
-    public void Pause() {
-
-    }
-
-    @Override
-    public void Repeat() {
-
-    }
 }
 

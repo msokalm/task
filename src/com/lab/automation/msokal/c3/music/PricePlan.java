@@ -6,9 +6,9 @@ public class PricePlan {
 
     private int costPerMonth;
     private String Status;
-    private DataRange dateRange;
+    private DateRange dateRange;
 
-    public PricePlan(int costPerMonth, String status, DataRange dateRange) {
+    public PricePlan(int costPerMonth, String status, DateRange dateRange) {
         this.costPerMonth = costPerMonth;
         this.Status = status;
         this.dateRange = dateRange;
@@ -30,11 +30,11 @@ public class PricePlan {
         Status = status;
     }
 
-    public DataRange getDateRange() {
+    public DateRange getDateRange() {
         return dateRange;
     }
 
-    public void setDateRange(DataRange dateRange) {
+    public void setDateRange(DateRange dateRange) {
         this.dateRange = dateRange;
     }
     @Override

@@ -1,4 +1,4 @@
-package com.lab.automation.msokal.c3.Factory;
+package com.lab.automation.msokal.c3.factory;
 
 import com.lab.automation.msokal.c3.enums.Genre;
 import com.lab.automation.msokal.c3.music.Song;

@@ -53,20 +53,7 @@ public class Album extends AbstractPL{
         this.album = album;
     }
 
-    @Override
-    public void Play() {
 
-    }
-
-    @Override
-    public void Pause() {
-
-    }
-
-    @Override
-    public void Repeat() {
-
-    }
 
     @Override
     public String toString() {
@@ -81,21 +68,29 @@ public class Album extends AbstractPL{
                 '}';
     }
 
+
+
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-        Album album1 = (Album) o;
-        return year == album1.year &&
-                playlistname == album1.playlistname &&
-                Objects.equals(album, album1.album);
+        boolean result = false;
+        if (this == o) {
+            result = true;
+        } else if (o != null && getClass() == o.getClass()) {
+            if (super.equals(o)) {
+                Album album1 = (Album) o;
+                result = year == album1.year &&
+                        playlistname == album1.playlistname &&
+                        Objects.equals(album, album1.album);
+            }
+        }
+        return result;
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), playlistname, year, album);
     }
+
 }
 
 

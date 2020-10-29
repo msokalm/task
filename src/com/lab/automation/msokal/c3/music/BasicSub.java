@@ -7,7 +7,7 @@ public class BasicSub extends PricePlan {
     private int costPerMonth;
 
 
-    public BasicSub(int costPerMonth, String status, DataRange dateRange) {
+    public BasicSub(int costPerMonth, String status, DateRange dateRange) {
         super(costPerMonth, status, dateRange);
         this.status="basic";
         this.costPerMonth=10;

@@ -6,7 +6,7 @@ public class FreeSub extends PricePlan {
     private String status;
     private int costPerMonth;
 
-    public FreeSub(int costPerMonth, String status, DataRange dateRange) {
+    public FreeSub(int costPerMonth, String status, DateRange dateRange) {
         super(costPerMonth, status, dateRange);
         this.status="free";
         this.costPerMonth=0;

@@ -4,7 +4,7 @@ package com.lab.automation.msokal.c3.music;
 import java.time.OffsetDateTime;
 import java.util.Objects;
 
-public class DataRange {
+public class DateRange {
     private OffsetDateTime dateStart;
     private OffsetDateTime dateEnd;
 
@@ -43,7 +43,7 @@ public class DataRange {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        DataRange dataRange = (DataRange) o;
+        DateRange dataRange = (DateRange) o;
         return Objects.equals(dateStart, dataRange.dateStart) &&
                 Objects.equals(dateEnd, dataRange.dateEnd);
     }
