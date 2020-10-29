@@ -2,7 +2,7 @@ package com.lab.automation.msokal.c3.music;
 
 import java.util.Objects;
 
-public  class App {
+public class App {
 
     private String typeOS;
     private double usTime;
@@ -73,4 +73,6 @@ public  class App {
     public int hashCode() {
         return Objects.hash(typeOS, usTime, userr, subscription);
     }
+
+
 }

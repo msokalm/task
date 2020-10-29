@@ -7,7 +7,7 @@ import com.lab.automation.msokal.c3.music.Playlist;
 public class AlbumFactory {
     public static Album TopAlbumFactory
             (int trackCount, int timepl, String songName, int year, Playlist album){
-        return new Album(trackCount,timepl,songName,Playlistname.TOP_50,year,album);
+        return new Album(trackCount,timepl,songName, Playlistname.TOP_50,year,album);
 
     }
     public static Album MoodAlbumFactory

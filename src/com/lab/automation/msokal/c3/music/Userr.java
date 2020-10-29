@@ -1,8 +1,11 @@
 package com.lab.automation.msokal.c3.music;
 
+import com.lab.automation.msokal.c3.music.Playlist;
+
 import java.util.Objects;
 
 public class Userr {
+
 
 
     private Subscription subscription;
@@ -10,14 +13,17 @@ public class Userr {
     private String userID;
     private String password;
     private boolean hPay;
+    private Playlist  recomendPL;
 
 
-    public Userr(Subscription subscription, String login, String userID, String password) {
+
+    public Userr(Subscription subscription, String login, String userID, String password,Playlist recomendPL) {
         this.subscription = subscription;
         this.login = login;
         this.userID = userID;
         this.password = password;
         this.hPay=true;
+        this.recomendPL = recomendPL;
     }
 
 
@@ -81,6 +87,8 @@ public class Userr {
     public int hashCode() {
         return Objects.hash(subscription, login, userID, password, hPay);
     }
+
+
 }
 
 
