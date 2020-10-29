@@ -65,7 +65,7 @@ public final class Song extends Sound {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        //if (!super.equals(o)) return false;
+        if (!super.equals(o)) return false;
         Song song = (Song) o;
         return Rating == song.Rating &&
                 countOfListen == song.countOfListen &&
